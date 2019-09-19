@@ -40,6 +40,7 @@ function login(user) {
 
 const falmata = new login('Falmata');
 const dawano = new login('Dawano');
+
 falmata.greet();
 dawano.greet();
 
@@ -47,14 +48,16 @@ dawano.greet();
 
 // code example for Explicit Binding
 
-function signIn(user) {
+function SignIn(user) {
     this.greeting = "Welcome";
     this.user = user;
     this.greet = function () {
         console.log(`${this.greeting} ${this.user}`);
     }
 };
-const ryan = new signIn('ryan');
-const nick = new signIn('nick');
+
+const ryan = new SignIn('ryan');
+const nick = new SignIn('nick');
+
 ryan.greet.call(nick);
 nick.greet.apply(ryan);
